@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Terms & Services | Ecoshine Jackson Cleaners LLC</title>
+  <title>Privacy Policy | Ecoshine Jackson Cleaners LLC</title>
   <meta name="description" content="Residential & vacation rental cleaning in Jackson, Wyoming and all Teton County. Reliable. Insured. Sparkling results."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/styles.css"/>
+  <link rel="stylesheet" href="../assets/styles.css"/>
   <!-- simpleParallax.js CDN -->
   <script defer src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
-  <script defer src="./assets/script.js"></script>
+  <script defer src="../assets/script.js"></script>
 </head>
 <body>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="./">
+      <a class="brand" href="..">
         <img src="/assets/logo-jackson-cleaners.png?q=80&w=400&auto=format&fit=crop" alt="Logo placeholder"/>
         <span class="brand-text">
           <span class="title">Ecoshine Jackson Cleaners LLC</span>
@@ -26,7 +26,7 @@
       <nav>
         <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
         <ul>
-          <li><a class="" href="./">Home</a></li>
+          <li><a class="active" href="..">Home</a></li>
         </ul>
       </nav>
     </div>
@@ -34,40 +34,39 @@
 
   <main class="section">
     <div class="container">
-      <h1 class="section-title">Terms & Services</h1>
-      <p class="section-sub">Clear expectations for great service. Last updated: <span id="updated"></span></p>
+      <h1 class="section-title">Privacy Policy</h1>
+      <p class="section-sub">Your privacy matters to us. Effective date: <span id="effective"></span></p>
 
-      <h2>1. Service Areas</h2>
-      <p>We provide cleaning services throughout Jackson, Wyoming and all of Teton County.</p>
+      <h2>Information We Collect</h2>
+      <p>Contact details you provide (name, email, phone), service addresses, and messages you send to us.</p>
 
-      <h2>2. Scheduling & Access</h2>
-      <p>Appointments are confirmed via phone or email. Please ensure we have access to the property at the scheduled time.</p>
+      <h2>How We Use Information</h2>
+      <p>To schedule services, send quotes, and communicate about appointments. We do not sell your data.</p>
 
-      <h2>3. Cancellations</h2>
-      <p>Free cancellations up to 24 hours before your appointment. Late cancellations or lock-outs may incur a fee.</p>
+      <h2>Data Security</h2>
+      <p>We use reasonable safeguards to protect your information.</p>
 
-      <h2>4. Satisfaction Guarantee</h2>
-      <p>If we miss something, notify us within 24 hours and we’ll make it right.</p>
+      <h2>Your Choices</h2>
+      <p>You may request access or deletion of your information by contacting us.</p>
 
-      <h2>5. Payment</h2>
-      <p>Payment is due upon completion. We accept common digital and card methods.</p>
-
-      <h2>6. Safety</h2>
-      <p>For safety, our team does not move heavy furniture or handle hazardous materials.</p>
+      <h2>Contact</h2>
+      <p>Email: <a data-mail href="#">Email us</a> • Phone: <a data-call href="#">Call us</a></p>
     </div>
   </main>
   <script>
-    document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
+    document.getElementById('effective').textContent = new Date().toISOString().slice(0,10);
   </script>
 
   <footer class="footer">
     <div class="container grid">
       <div>© <span id="year"></span> Ecoshine Jackson Cleaners LLC • Jackson, WY • All Teton County</div>
       <div>
-        <a href="./terms.html">Terms & Services</a> • <a href="./privacy.html">Privacy Policy</a>
+        <a href="../terms-and-conditions/index.html">Terms & Services</a> • <a href="./index.html">Privacy Policy</a>
       </div>
       <div>
         <a data-call href="tel:+13074135799">Phone: (307) 413-5799</a>
+      </div>
+
       </div>
     </div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

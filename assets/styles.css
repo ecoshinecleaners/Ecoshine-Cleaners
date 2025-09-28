@@ -395,19 +395,73 @@ body {
 @media (max-width: 940px){
   .about-grid, .about-grid.reverse{ grid-template-columns: 1fr; }
 }
+/* --- Lightbox overlay --- */
+.lb {
+  position: fixed; inset: 0; z-index: 9999;
+  display: none;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(2px);
+}
+.lb.is-open { display: block; }
+
+.lb__stage {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  padding: min(6vw, 48px);
+}
+
+.lb__img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  border-radius: 12px;
+  transition: transform .2s ease;
+}
+
+.lb__close {
+  position: absolute; top: 14px; right: 14px;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 0; background: rgba(255,255,255,.12); color: #fff;
+  font-size: 28px; line-height: 1; cursor: pointer;
+  display: grid; place-items: center;
+}
+
+.lb__nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 64px; border-radius: 12px;
+  border: 0; background: rgba(255,255,255,.12); color: #fff;
+  font-size: 38px; line-height: 1; cursor: pointer;
+}
+.lb__prev { left: 12px; }
+.lb__next { right: 12px; }
+
+.lb__count {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  color: #fff; background: rgba(0,0,0,.35);
+  padding: 6px 10px; border-radius: 999px; font-size: 14px;
+}
+
+/* Buttons hover/focus */
+.lb__close:hover, .lb__nav:hover,
+.lb__close:focus-visible, .lb__nav:focus-visible {
+  outline: 2px solid rgba(255,255,255,.45);
+}
+
+/* Optional: make collage images show clickability */
+.collage-grid.equal .tile img { cursor: zoom-in; }
+
+/* (Minor fix) If you use .span-4 elsewhere, ensure the dot is present: */
+/* .collage-grid .span-4 { grid-column: span 4; } */
 
 /* ---------- Collage ---------- */
 .collage{ padding-top: 60px; }
 .collage-grid{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 8px;
-  padding: 0 min(4vw, 24px) 12px;
 }
 .collage-grid figure{ margin:0; }
 .collage-grid img{
   width:100%; height:100%; object-fit:cover;
-  border-radius: 14px; box-shadow: var(--shadow);
   aspect-ratio: 16/9;
   transform: translateY(18px); opacity: 0; transition: transform .6s ease, opacity .6s ease;
 }
@@ -430,8 +484,6 @@ collage-grid .span-4{ grid-column: span 4; }
 .collage-grid.equal{
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* mobile: 2 columns */
-  gap: 10px;
-  padding: 0 min(4vw, 24px) 12px;
 }
 
 @media (min-width: 900px){
@@ -442,7 +494,6 @@ collage-grid .span-4{ grid-column: span 4; }
 
 .collage-grid.equal .tile{
   overflow: hidden;
-  border-radius: 14px;
   box-shadow: var(--shadow);
 }
 

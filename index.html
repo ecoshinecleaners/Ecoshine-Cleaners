@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/styles.css"/>
   <!-- simpleParallax.js CDN -->
   <script defer src="./assets/script.js"></script>
+  <script src="/assets/collage-lightbox.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -96,23 +97,28 @@
     </section>
 
     <!-- Collage -->
-    <section class="section alt collage" id="collage">
-      <div class="container">
-        <h2 class="section-title">Work in Action</h2>
-        <p class="section-sub">A peek at our products, process, and results.</p>
-      </div>
+    <div class="collage-grid equal" id="collage">
+      <figure class="tile"><img src="./assets/img/collage/1.webp" alt="Image 1" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/2.webp" alt="Image 2" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/3.webp" alt="Image 3" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/4.webp" alt="Image 4" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/5.webp" alt="Image 5" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/6.webp" alt="Image 6" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/7.webp" alt="Image 7" loading="lazy" decoding="async"></figure>
+      <figure class="tile"><img src="./assets/img/collage/8.webp" alt="Image 8" loading="lazy" decoding="async"></figure>
+    </div>
 
-      <div class="collage-grid equal">
-        <figure class="tile"><img src="./assets/img/collage/1.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/2.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/3.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/4.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/5.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/6.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/7.webp" alt="" loading="lazy" decoding="async"></figure>
-        <figure class="tile"><img src="./assets/img/collage/8.webp" alt="" loading="lazy" decoding="async"></figure>
+    <!-- Lightbox -->
+    <div class="lb" id="lightbox" aria-hidden="true">
+      <button class="lb__close" aria-label="Close (Esc)">×</button>
+      <button class="lb__nav lb__prev" aria-label="Previous image">‹</button>
+      <button class="lb__nav lb__next" aria-label="Next image">›</button>
+      <div class="lb__stage">
+        <img class="lb__img" alt="">
       </div>
-    </section>
+      <div class="lb__count" aria-live="polite"></div>
+    </div>
+
 
 
     <!--    &lt;!&ndash; Sticky Layer 2: Gallery &ndash;&gt;-->
@@ -190,10 +196,14 @@
     <div class="container grid">
       <div>© <span id="year"></span> Ecoshine Jackson Cleaners LLC • Jackson, WY • All Teton County</div>
       <div>
-        <a href="./terms.html">Terms & Services</a> • <a href="./privacy.html">Privacy Policy</a>
+        <a href="terms-and-conditions/index.html">Terms & Services</a> • <a href="privacy-policy/index.html">Privacy Policy</a>
       </div>
       <div>
-         <a data-call href="tel:+13074135799">Phone: (307) 413-5799</a>
+         <a data-call href="tel:+13074135799">Phone: (307) 413-5799</a></br>
+        <a href="mailto:ecoshinecleanersllc@gmail.com?subject=Cleaning%20Service%20Inquiry">
+          Email: ecoshinecleanersllc@gmail.com
+        </a>
+
       </div>
     </div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
