@@ -513,6 +513,13 @@ collage-grid .span-4{ grid-column: span 4; }
   }
 }
 /* === About media: perfectly square, responsive === */
+.about-media > img {
+  width: 100%;
+  height: auto;          /* <— important: not 100% */
+  display: block;
+  opacity: 1 !important; /* ensure it's visible even if a base rule sets 0 */
+  transform: none !important;
+}
 /* Desktop/tablet: square up to 500px; Mobile: smaller square */
 .about{ --about-square: clamp(220px, 42vw, 500px); }
 @media (max-width: 560px){
