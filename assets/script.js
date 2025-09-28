@@ -77,25 +77,25 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 })();
 
 // Floating Call button (mobile) with dismiss + localStorage
-(() => {
-  const root = document.documentElement;
-  const tel = (root.dataset.phone || '').replace(/[^+\d]/g,'');
-  if (!tel) return;
-
-  const hidden = localStorage.getItem('fab_call_hidden') === '1';
-  if (hidden) return;
-
-  const fabWrap = document.createElement('div');
-  fabWrap.className = 'fab-call';
-  fabWrap.innerHTML = `<button class="close" aria-label="Hide">×</button>
-    <a class="fab" href="tel:${tel}">📞 Call Us</a>`;
-  document.body.appendChild(fabWrap);
-
-  fabWrap.querySelector('.close').addEventListener('click', () => {
-    fabWrap.remove();
-    localStorage.setItem('fab_call_hidden', '1');
-  }, { passive: true });
-})();
+// (() => {
+//   const root = document.documentElement;
+//   const tel = (root.dataset.phone || '').replace(/[^+\d]/g,'');
+//   if (!tel) return;
+//
+//   const hidden = localStorage.getItem('fab_call_hidden') === '1';
+//   if (hidden) return;
+//
+//   const fabWrap = document.createElement('div');
+//   fabWrap.className = 'fab-call';
+//   fabWrap.innerHTML = `<button class="close" aria-label="Hide">×</button>
+//     <a class="fab" href="tel:${tel}">📞 Call Us</a>`;
+//   document.body.appendChild(fabWrap);
+//
+//   fabWrap.querySelector('.close').addEventListener('click', () => {
+//     fabWrap.remove();
+//     localStorage.setItem('fab_call_hidden', '1');
+//   }, { passive: true });
+// })();
 
 
 // Custom parallax (desktop only): move hero image slower than scroll
